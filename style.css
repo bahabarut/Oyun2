@@ -15,7 +15,6 @@
 
 .oyunCont {
     display: flex;
-    padding: 5px;
     height: 93%;
     box-sizing: border-box;
     position: relative;
@@ -30,19 +29,19 @@
 }
 
 #progress {
-    width: 100%;
     background: linear-gradient(90deg, rgba(30,255,0,1) 0%, rgba(255,0,0,1) 100%);
+    /*transition: width 50ms linear;*/
 }
 
 #oyuncu {
     width: 30px;
     height: 30px;
     background-color: red;
-    border: solid 1px white;
     border-radius: 50%;
-    align-self: end;
-    position:absolute;
-    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
 }
 
 #hedef {
