@@ -1,20 +1,17 @@
 var sayac = 0;
 $(document).ready(function () {
     HedefleriHazirla();
-    for (var i = 0; i < 40; i++) {
-        var line = document.createElement("span");
-        line.setAttribute("class", "barLines");
-        document.querySelector(".barCont").appendChild(line);
-    }
 });
 $(document).on("keydown", function (ev) {
-    if (ev.which === 32) {
-        console.log(sayac +=2);
+    if (ev.which === 32 && sayac < 100) {
+        console.log(sayac++);
+        $("#progress").css("width", sayac + "%");
     }
 });
 $(document).on("keyup", function (ev) {
     if (ev.which === 32) {
         sayac = 0;
+        $("#progress").css("width", sayac + "%");
     }
 });
 
@@ -24,7 +21,7 @@ function HedefleriHazirla() {
         var newEl = document.createElement("span");
         newEl.setAttribute("class", "hedefler");
 
-        newEl.style.top = `${RandomUret(1, 94)}%`
+        newEl.style.top = `${RandomUret(1, 92)}%`
         newEl.style.left = `${RandomUret(1, 95)}%`
 
         alan.append(newEl);
